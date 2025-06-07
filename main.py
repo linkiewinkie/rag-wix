@@ -36,7 +36,7 @@ async def upload_file(file: UploadFile = File(...)):
     client = Client(Settings())
     try:
     client.delete_collection(name="ragdb")
-except Exception as e:
+    except Exception as e:
     print(f"Ignore error when deleting collection: {e}")
     collection = client.create_collection(name="ragdb")
     embeddings = [embedding_function.embed_query(doc.page_content) for doc in docs]
