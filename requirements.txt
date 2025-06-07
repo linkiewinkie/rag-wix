@@ -4,3 +4,4 @@ langchain
 chromadb
 pymupdf
 ollama
+langchain-community
